@@ -55,7 +55,6 @@ a {
     position: relative;
     width: 95%;
     height: 95%;
-    /* padding: 2%; */
     margin: 0 auto;
     border: 5px solid #000;
 }
@@ -177,7 +176,7 @@ a {
 
 @media screen and (max-width:991px) {
     .hirotaka-title {
-        width: calc(660 * 100vh / 1017);
+        width: 100%;
     }
     .char-img01 {
         height: calc(450 * 100vh / 1017);
@@ -229,6 +228,90 @@ a {
 }
 
 
-@media screen and (max-width:768px) {
-    
+@media screen and (max-width:425px) {
+    .hirotaka-title {
+        width: 90%;
+    }
+    .designedby-text {
+        font-size: calc(9 * 100vw / 425);
+    }
+    .illust-flex {
+        display: block;
+    }
+    .link-btn {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .char-img01 {
+        width: 100%;
+    }
+    .char-img02 {
+        height: calc(300 * 100vw / 425);
+        margin-right: calc(3 * 100vw / 425);
+        margin-left: calc(40 * 100vw / 425);
+        margin-top: calc(9 * 100vw / 425);
+    }
+    .char-img03 {
+        height: calc(250 * 100vw / 425);
+        margin-left: calc(4 * 100vw / 425);
+        margin-right: calc(20 * 100vw / 425);
+        margin-top: calc(70 * 100vw / 425);
+    }
+    #not-working .hirotaka-illust {
+        display: flex;
+        justify-content: right;
+    }
+    #working .speech-bubble {
+        top: calc(10 * 100vw / 425);
+        left: calc(140 * 100vw / 425);
+        width: calc(210 * 100vw / 425);
+    }
+    #not-working .speech-bubble {
+        top: calc(40 * 100vw / 425);
+        right: calc(130 * 100vw / 425);
+        width: calc(240 * 100vw / 425);
+    }
+    #hirotaka .text-in-illust, #working .text-in-illust, #not-working .text-in-illust {
+        font-size: calc(12 * 100vw / 425);
+    }
+    #hirotaka .text-in-illust {
+        top: calc(270 * 100vh / 1017);;
+        right: 50%;
+        width: 100%;
+        transform: translateX(50%);
+        line-height: calc(30 * 100vw / 425);
+    }
+    #working .text-in-illust {
+        top: calc(33 * 100vw / 425);
+        right: calc(40 * 100vw / 425);
+        line-height: calc(20 * 100vw / 425);
+    }
+    #not-working .text-in-illust {
+        top: calc(40 * 100vw / 425);
+        left: calc(27 * 100vw / 425);
+        line-height: calc(20 * 100vw / 425);
+    }
+    .link-btn {
+        font-size: calc(20 * 100vw / 425);
+        line-height: calc(20 * 100vw / 425);
+    }
+    #hirotaka .link-btn {
+        margin-top: 5%;
+        margin-left: 0;
+    }
+    #working .link-btn {
+        margin-top: calc(30 * 100vw / 425);
+        margin-right: 0;
+    }
+    #not-working .link-btn {
+        margin-top: calc(40 * 100vw / 425);
+    }
+    .hirotaka-btn, .working-btn, .not-working-btn {
+        margin: calc(5 * 100vw / 425) 0;
+    }
+    #working .link-btn div:nth-of-type(2), #not-working .link-btn div:nth-of-type(3) {
+        line-height: calc(60* 100vw / 425);
+    }
 }
