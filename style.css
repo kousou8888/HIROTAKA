@@ -85,24 +85,43 @@ a {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
 }
+
 .hirotaka-illust {
-    position: relative;
+    position: absolute;
+}
+#hirotaka .hirotaka-illust {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(650 * 100vh / 1017);
 }
 .char-img01 {
-    height: calc(650 * 100vh / 1017);
-    margin-left: calc(10 * 100vh / 1017);
+    width: 100%;
+    margin-right: calc(60 * 100vh / 1017);
+}
+    
+#working .hirotaka-illust {
+    top: 10%;
+    left: 20%;
+    transform: translateX(-50%);
+    width: calc(300 * 100vh / 1017);
 }
 .char-img02 {
-    height: calc(880 * 100vh / 1017);
-    margin-right: calc(42 * 100vh / 1017);
-    margin-top: calc(48 * 100vh / 1017);
+    width: 100%;
+}
+
+#not-working .hirotaka-illust {
+    top: 10%;
+    left: 70%;
+    transform: translateX(-50%);
+    width: calc(380 * 100vh / 1017);
 }
 .char-img03 {
-    height: calc(880 * 100vh / 1017);
-    margin-left: calc(40 * 100vh / 1017);
-    margin-top: calc(48 * 100vh / 1017);
+    width: 100%;
 }
+
 #working .speech-bubble {
     position: absolute;
     top: calc(2 * 100vh / 1017);
@@ -111,13 +130,14 @@ a {
 }
 #not-working .speech-bubble {
     position: absolute;
-    top: calc(40 * 100vh / 1017);
-    right: calc(300 * 100vh / 1017);
-    width: calc(590 * 100vh / 1017);
+    top: calc(0 * 100vh / 1017);
+    right: calc(210 * 100vh / 1017);
+    width: calc(480 * 100vh / 1017);
 }
 .speech-bubble img {
     width: 100%;
 }
+
 #hirotaka .text-in-illust, #working .text-in-illust, #not-working .text-in-illust {
     position: absolute;
     font-size: calc(28 * 100vh / 1017);
@@ -136,8 +156,8 @@ a {
     line-height: calc(60 * 100vh / 1017);
 }
 #not-working .text-in-illust {
-    top: calc(90 * 100vh / 1017);
-    left: calc(60 * 100vh / 1017);
+    top: calc(75 * 100vh / 1017);
+    left: calc(28 * 100vh / 1017);
     line-height: calc(60 * 100vh / 1017);
 }
 .link-btn {
@@ -148,14 +168,24 @@ a {
     line-height: calc(50 * 100vw / 1920);
 }
 #hirotaka .link-btn {
-    margin-left: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
+
 #working .link-btn {
-    margin-top: 10%;
-    margin-right: 5%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: calc(270 * 100vh / 1017) 0 0 auto;
 }
 #not-working .link-btn {
-    margin-left: 2%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: calc(270 * 100vh / 1017) auto 0 0 ;
 }
 .hirotaka-btn, .working-btn, .not-working-btn {
     display: inline-block;
@@ -170,73 +200,107 @@ a {
 }
 #working .link-btn div:nth-of-type(2), #not-working .link-btn div:nth-of-type(3) {
     font-size: calc(110 * 100vw / 1920);
-    line-height: calc(190* 100vw / 1920);
+    line-height: calc(190* 100vh / 1017);
 }
 
 
-@media screen and (max-width:991px) {
+@media screen and (max-width:768px) {
     .hirotaka-title {
-        width: 100%;
-    }
-    .char-img01 {
-        height: calc(450 * 100vh / 1017);
-        margin-left: calc(0 * 100vh / 1017);
-    }
-    .char-img02 {
-        height: calc(780 * 100vh / 1017);
-        margin-right: calc(3 * 100vh / 1017);
-        margin-top: calc(96 * 100vh / 1017);
-    }
-    .char-img03 {
-        height: calc(580 * 100vh / 1017);
-        margin-left: calc(4 * 100vh / 1017);
-        margin-top: calc(170 * 100vh / 1017);
-    }
-    #working .speech-bubble {
-        position: absolute;
-        top: calc(120 * 100vh / 1017);
-        left: calc(250 * 100vh / 1017);
-        width: calc(350 * 100vh / 1017);
-    }
-    #not-working .speech-bubble {
-        position: absolute;
-        top: calc(100 * 100vh / 1017);
-        right: calc(200 * 100vh / 1017);
-        width: calc(380 * 100vh / 1017);
-    }
-    #hirotaka .text-in-illust, #working .text-in-illust, #not-working .text-in-illust {
-        font-size: calc(22 * 100vh / 1017);
-    }
-    #hirotaka .text-in-illust {
-        top: calc(250 * 100vh / 1017);
-        right: calc(80 * 100vh / 1017);
-        line-height: calc(70 * 100vh / 1017);
-    }
-    #working .text-in-illust {
-        top: calc(45 * 100vh / 1017);
-        right: calc(65 * 100vh / 1017);
-        line-height: calc(40 * 100vh / 1017);
-    }
-    #not-working .text-in-illust {
-        top: calc(65 * 100vh / 1017);
-        left: calc(17 * 100vh / 1017);
-        line-height: calc(40 * 100vh / 1017);
-    }
-    .link-btn {
-        line-height: calc(20 * 100vw / 1920);
-    }
-}
-
-
-@media screen and (max-width:425px) {
-    .hirotaka-title {
-        width: 90%;
+        width: 80%;
+        margin: 1% auto 0;
     }
     .designedby-text {
         font-size: calc(9 * 100vw / 425);
     }
+    .main-bg {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    #hirotaka .illust-flex {
+        padding-bottom: calc(180 * 100vw / 425);
+    }
+    #hirotaka .hirotaka-illust {
+        top:  calc(0 * 100vw / 425);
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(220 * 100vw / 425);
+    }
+    #working .hirotaka-illust {
+        top: calc(-100 * 100vw / 425);
+        left: calc(70 * 100vw / 425);
+        width: calc(130 * 100vw / 425);
+    }
+    #not-working .hirotaka-illust {
+        top: calc(0 * 100vw / 425);
+        right: calc(10 * 100vw / 425);
+        transform: translateX(-50%);
+        width: calc(150 * 100vw / 425);
+    }
+
+    #hirotaka .text-in-illust, #working .text-in-illust, #not-working .text-in-illust {
+        font-size: calc(10 * 100vw / 425);
+    }
+    #hirotaka .text-in-illust {
+        top: calc(120 * 100vw / 425);;
+        right: 50%;
+        width: 100%;
+        transform: translateX(50%);
+        line-height: calc(30 * 100vw / 425);
+    }
+    #working .text-in-illust {
+        top: calc(25 * 100vw / 425);
+        right: calc(37 * 100vw / 425);
+        line-height: calc(20 * 100vw / 425);
+    }
+    #not-working .text-in-illust {
+        top: calc(32 * 100vw / 425);
+        left: calc(24 * 100vw / 425);
+        line-height: calc(20 * 100vw / 425);
+    }
+    #working .speech-bubble {
+        top: calc(10 * 100vw / 425);
+        left: calc(110 * 100vw / 425);
+        width: calc(180 * 100vw / 425);
+    }
+    #not-working .speech-bubble {
+        top: calc(-20 * 100vw / 425);
+        right: calc(80 * 100vw / 425);
+        width: calc(200 * 100vw / 425);
+    }
+
+    .link-btn {
+        font-size: calc(16 * 100vw / 425);
+        line-height: calc(18 * 100vw / 425);
+    }
+    #working .link-btn {
+        margin-top: calc(70 * 100vw / 425);
+        margin-right: 0;
+    }
+    #not-working .link-btn {
+        margin-top: calc(180 * 100vw / 425);
+    }
+    .hirotaka-btn, .working-btn, .not-working-btn {
+        margin: calc(5 * 100vw / 425) 0;
+    }
+    #working .link-btn div:nth-of-type(2), #not-working .link-btn div:nth-of-type(3) {
+        line-height: calc(60* 100vw / 425);
+        font-size: calc(26 * 100vw / 425);
+    }
+
+
+
+    /* .hirotaka-title {
+        width: calc(300 * 100vw / 425);
+        margin: 1% auto 0;
+    }
+    
     .illust-flex {
         display: block;
+        position: relative;
+        width: 100%;
     }
     .link-btn {
         display: flex;
@@ -244,21 +308,39 @@ a {
         flex-direction: column;
         align-items: center;
     }
+    #hirotaka .illust-flex {
+        position: relative;
+        padding-bottom: calc(250 * 100vw / 425);
+    }
+    .main-bg {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-content: center;
+    }
+    #hirotaka .hirotaka-illust {
+        top:  calc(100 * 100vw / 425);
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(250 * 100vw / 425);
+    }
     .char-img01 {
         width: 100%;
+        margin-right: calc(60 * 100vh / 1017);
     }
-    .char-img02 {
-        height: calc(300 * 100vw / 425);
-        margin-right: calc(3 * 100vw / 425);
-        margin-left: calc(40 * 100vw / 425);
-        margin-top: calc(9 * 100vw / 425);
+        
+    
+    
+    #not-working .hirotaka-illust {
+        top: 10%;
+        left: 70%;
+        transform: translateX(-50%);
+        width: calc(380 * 100vh / 1017);
     }
     .char-img03 {
-        height: calc(250 * 100vw / 425);
-        margin-left: calc(4 * 100vw / 425);
-        margin-right: calc(20 * 100vw / 425);
-        margin-top: calc(70 * 100vw / 425);
+        width: 100%;
     }
+
     #not-working .hirotaka-illust {
         display: flex;
         justify-content: right;
@@ -268,11 +350,7 @@ a {
         left: calc(140 * 100vw / 425);
         width: calc(210 * 100vw / 425);
     }
-    #not-working .speech-bubble {
-        top: calc(40 * 100vw / 425);
-        right: calc(130 * 100vw / 425);
-        width: calc(240 * 100vw / 425);
-    }
+    
     #hirotaka .text-in-illust, #working .text-in-illust, #not-working .text-in-illust {
         font-size: calc(12 * 100vw / 425);
     }
@@ -283,35 +361,17 @@ a {
         transform: translateX(50%);
         line-height: calc(30 * 100vw / 425);
     }
-    #working .text-in-illust {
-        top: calc(33 * 100vw / 425);
-        right: calc(40 * 100vw / 425);
-        line-height: calc(20 * 100vw / 425);
-    }
-    #not-working .text-in-illust {
-        top: calc(40 * 100vw / 425);
-        left: calc(27 * 100vw / 425);
-        line-height: calc(20 * 100vw / 425);
-    }
+    
+    
     .link-btn {
         font-size: calc(20 * 100vw / 425);
         line-height: calc(20 * 100vw / 425);
-    }
-    #hirotaka .link-btn {
-        margin-top: 5%;
-        margin-left: 0;
     }
     #working .link-btn {
         margin-top: calc(30 * 100vw / 425);
         margin-right: 0;
     }
-    #not-working .link-btn {
-        margin-top: calc(40 * 100vw / 425);
-    }
-    .hirotaka-btn, .working-btn, .not-working-btn {
-        margin: calc(5 * 100vw / 425) 0;
-    }
-    #working .link-btn div:nth-of-type(2), #not-working .link-btn div:nth-of-type(3) {
-        line-height: calc(60* 100vw / 425);
-    }
+    
+    
+     */
 }
