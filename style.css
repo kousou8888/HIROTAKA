@@ -80,6 +80,9 @@ a {
     width: calc(860 * 100vh / 1017);
     margin: 0 auto;
 }
+.hirotaka-title img {
+    width: 100%;
+}
 .illust-flex {
     position: relative;
     display: flex;
