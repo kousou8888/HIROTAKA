@@ -57,6 +57,13 @@ a {
     height: 95%;
     margin: 0 auto;
     border: 5px solid #000;
+    opacity: 0;
+    transform: translateX(20%);
+}
+#hirotaka.is-active .main-bg, #working.is-active .main-bg, #not-working.is-active .main-bg {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all .8s ease;
 }
 #hirotaka .main-bg {
     background-color: #e2a000;
@@ -177,15 +184,15 @@ a {
 }
 
 #working .link-btn {
-    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: calc(270 * 100vh / 1017) 0 0 auto;
+    margin-top: calc(270 * 100vh / 1017);
 }
 #not-working .link-btn {
     width: 50%;
     display: flex;
+    justify-content: left;
     flex-direction: column;
     align-items: center;
     margin: calc(270 * 100vh / 1017) auto 0 0 ;
@@ -289,92 +296,7 @@ a {
         margin: calc(5 * 100vw / 425) 0;
     }
     #working .link-btn div:nth-of-type(2), #not-working .link-btn div:nth-of-type(3) {
-        line-height: calc(60* 100vw / 425);
+        line-height: calc(60 * 100vw / 425);
         font-size: calc(26 * 100vw / 425);
     }
-
-
-
-    /* .hirotaka-title {
-        width: calc(300 * 100vw / 425);
-        margin: 1% auto 0;
-    }
-    
-    .illust-flex {
-        display: block;
-        position: relative;
-        width: 100%;
-    }
-    .link-btn {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
-    #hirotaka .illust-flex {
-        position: relative;
-        padding-bottom: calc(250 * 100vw / 425);
-    }
-    .main-bg {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-content: center;
-    }
-    #hirotaka .hirotaka-illust {
-        top:  calc(100 * 100vw / 425);
-        left: 50%;
-        transform: translateX(-50%);
-        width: calc(250 * 100vw / 425);
-    }
-    .char-img01 {
-        width: 100%;
-        margin-right: calc(60 * 100vh / 1017);
-    }
-        
-    
-    
-    #not-working .hirotaka-illust {
-        top: 10%;
-        left: 70%;
-        transform: translateX(-50%);
-        width: calc(380 * 100vh / 1017);
-    }
-    .char-img03 {
-        width: 100%;
-    }
-
-    #not-working .hirotaka-illust {
-        display: flex;
-        justify-content: right;
-    }
-    #working .speech-bubble {
-        top: calc(10 * 100vw / 425);
-        left: calc(140 * 100vw / 425);
-        width: calc(210 * 100vw / 425);
-    }
-    
-    #hirotaka .text-in-illust, #working .text-in-illust, #not-working .text-in-illust {
-        font-size: calc(12 * 100vw / 425);
-    }
-    #hirotaka .text-in-illust {
-        top: calc(270 * 100vh / 1017);;
-        right: 50%;
-        width: 100%;
-        transform: translateX(50%);
-        line-height: calc(30 * 100vw / 425);
-    }
-    
-    
-    .link-btn {
-        font-size: calc(20 * 100vw / 425);
-        line-height: calc(20 * 100vw / 425);
-    }
-    #working .link-btn {
-        margin-top: calc(30 * 100vw / 425);
-        margin-right: 0;
-    }
-    
-    
-     */
 }
