@@ -16,8 +16,8 @@
 }
 body {
     -webkit-text-size-adjust: 100%;
-    margin: 0 auto;
     overflow-x: hidden;
+    margin: 0 auto;
 }
 body, p, br, img, ul, h1, h2, h3, h4, h5, h6 {
     padding: 0;
@@ -36,8 +36,8 @@ a {
 
 
 #main {
+    overflow-x: hidden;
     width: 100%;
-    overflow: scroll;
     scroll-snap-type: y mandatory;
     height: 100vh;
 }
