@@ -93,6 +93,21 @@ a {
     width: 100%;
 }
 
+.js-control span{
+    opacity: 0;
+}
+.js-control.is-active span{
+    animation: text_anime 1s ease-in-out forwards; 
+}
+@keyframes text_anime {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .hirotaka-illust {
     position: relative;
 }
@@ -147,17 +162,19 @@ a {
 }
 #hirotaka .text-in-illust {
     width: 100%;
+    line-height: calc(80 * 100vh / 1017);
 }
 #working .text-in-illust {
     position: absolute;
-    width: 100%;
+    width: 70%;
     top: calc(40 * 100vh / 1017);
-    left: calc(20 * 100vh / 1017);
+    left: calc(65 * 100vh / 1017);
     line-height: calc(60 * 100vh / 1017);
 }
 #not-working .text-in-illust {
     position: absolute;
-    top: calc(25 * 100vh / 1017);
+    width: 60%;
+    top: calc(35 * 100vh / 1017);
     left: calc(63 * 100vh / 1017);
     line-height: calc(60 * 100vh / 1017);
 }
