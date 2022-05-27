@@ -161,8 +161,10 @@ a {
     text-align: center;
 }
 #hirotaka .text-in-illust {
-    width: 100%;
-    line-height: calc(80 * 100vh / 1017);
+    top: calc(0 * 100vh / 1017);
+    left: calc(22 * 100vh / 1017);
+    width: 86%;
+    line-height: calc(50 * 100vh / 1017);
 }
 #working .text-in-illust {
     position: absolute;
@@ -173,9 +175,9 @@ a {
 }
 #not-working .text-in-illust {
     position: absolute;
-    width: 60%;
+    width: 70%;
     top: calc(35 * 100vh / 1017);
-    left: calc(63 * 100vh / 1017);
+    left: calc(45 * 100vh / 1017);
     line-height: calc(60 * 100vh / 1017);
 }
 .link-btn {
@@ -265,20 +267,19 @@ a {
         font-size: calc(10 * 100vw / 425);
     }
     #hirotaka .text-in-illust {
-        top: calc(0 * 100vw / 425);;
-        right: 50%;
-        width: 100%;
-        transform: translateX(50%);
+        top: calc(0 * 100vw / 425);
+        left: calc(32 * 100vw / 425);
+        width: 60%;
         line-height: calc(20 * 100vw / 425);
     }
     #working .text-in-illust {
-        top: calc(25 * 100vw / 425);
-        right: calc(37 * 100vw / 425);
+        top: calc(12 * 100vw / 425);
+        left: calc(34 * 100vw / 425);
         line-height: calc(20 * 100vw / 425);
     }
     #not-working .text-in-illust {
-        top: calc(15 * 100vw / 425);
-        left: calc(27 * 100vw / 425);
+        top: calc(19 * 100vw / 425);
+        left: calc(20 * 100vw / 425);
         line-height: calc(20 * 100vw / 425);
     }
     #working .speech-bubble {
@@ -287,9 +288,9 @@ a {
         width: calc(180 * 100vw / 425);
     }
     #not-working .speech-bubble {
-        top: calc(-20 * 100vw / 425);
+        top: calc(-35 * 100vw / 425);
         right: calc(80 * 100vw / 425);
-        width: calc(180 * 100vw / 425);
+        width: calc(190 * 100vw / 425);
     }
     .link-btn {
         font-size: calc(16 * 100vw / 425);
