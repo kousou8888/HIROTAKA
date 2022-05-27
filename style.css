@@ -273,7 +273,7 @@ a {
         line-height: calc(20 * 100vw / 425);
     }
     #working .text-in-illust {
-        top: calc(12 * 100vw / 425);
+        top: calc(25 * 100vw / 425);
         left: calc(34 * 100vw / 425);
         line-height: calc(20 * 100vw / 425);
     }
