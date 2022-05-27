@@ -57,7 +57,7 @@ a {
     height: 95%;
     margin: 0 auto;
     border: 5px solid #000;
-    opacity: 0;
+/*     opacity: 0; */
 }
 
 /* #hirotaka .main-bg::before, #working .main-bg::before, #not-working .main-bg::before {
@@ -71,8 +71,8 @@ a {
 } */
 
 #hirotaka.is-active .main-bg, #working.is-active .main-bg, #not-working.is-active .main-bg {
-    opacity: 1;
-    transition: all .3s ease;
+/*     opacity: 1;
+    transition: all .3s ease; */
 }
 #hirotaka .main-bg {
     background-color: #e2a000;
