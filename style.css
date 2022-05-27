@@ -36,11 +36,13 @@ a {
 
 
 #main {
-    overflow: auto;
+    width: 100%;
+    overflow: scroll;
     scroll-snap-type: y mandatory;
     height: 100vh;
 }
 .js-control {
+    height: 100vh;
     scroll-snap-align: start;
 }
 #hirotaka, #working, #not-working {
