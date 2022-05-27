@@ -9,7 +9,7 @@ const LinkButton = function() {
     for (let i = 0; i <Element.length; i++) {
       Element[i].onclick = function() {
         const ElementId = document.getElementById(EleId);
-        ElementId.scrollIntoView(true);
+        ElementId.scrollIntoView();
       }
     }
   }
@@ -23,13 +23,27 @@ const scrollAnime = function () {
   document.getElementById('main').addEventListener("scroll", function () {
     for(let a = 0; a < ClassTop.length; a++) {
       const EleTop = ClassTop[a].getBoundingClientRect().top;
-      console.log(EleTop)
+      // console.log(EleTop);
       if(EleTop == 0) {
         ClassTop[a].classList.add('is-active');
       }else{
-        ClassTop[a].classList.remove('is-active');
+        // ClassTop[a].classList.remove('is-active');
       }
     }
   });
 }
 scrollAnime();
+
+const getSpan = function() {
+  const classText = document.getElementsByClassName('text-in-illust');
+  for(let i = 0; i < classText.length; i++) {
+    const text = classText[i].innerHTML;
+    let spanText = "";
+    text.split("").forEach(function(value, a) {
+      spanText += '<span style = "animation-delay:' + [a]*0.1 + 's;">' + value + '</span>';
+      classText[i].innerHTML = spanText;
+      console.log(spanText);
+    });
+  }
+}
+getSpan();
