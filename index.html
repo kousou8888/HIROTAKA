@@ -36,6 +36,9 @@
         </div>
         <div id="working" class="js-control">
             <div class="main-bg">
+                <div class="link-ab">
+                    <a href="portfolio.html">PORTFORLIO</a>
+                </div>
                 <div class="illust-flex">
                     <div class="hirotaka-illust">
                         <img class="char-img02" src="img/HIROTAKA(character).svg" alt="My name is HIROTAKA">
@@ -71,8 +74,25 @@
             </div>
         </div>
     </div>
+
+    <style>
+        #main, #hirotaka, #working, #not-working, .js-control {
+            height: calc(var(--vh, 1vh) * 100);
+        }
+    </style>
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="main.js"></script>
+    <script>
+        // 画面高さ取得
+        const setFillHeight = () => {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+        // 画面のサイズ変動があった時に高さを再計算する
+        window.addEventListener('resize', setFillHeight);
+        // 初期化
+        setFillHeight();
+    </script>
 </body>
 </html>
